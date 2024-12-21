@@ -10,6 +10,8 @@ export const RealTimeBinanceData = () => {
   const [messages, setMessages] = useState<string[]>([]);
   const [isConnected, setIsConnected] = useState(false);
   const [hasDisconnected, setHasDisconnected] = useState(false);
+  const [showConnectionError, setShowConnectionError] = useState(false);
+  const [connectionError, setConnectionError] = useState<string | null>(null);
 
   // guarantees only necessary data lives in the FE client
   const dataSetLimit = 50;
@@ -17,8 +19,15 @@ export const RealTimeBinanceData = () => {
   useEffect(() => {
     socket.current = socketio(REAL_TIME_SERVER);
 
+    socket.current.on("connect", () => {
+      setConnectionError(null);
+      setShowConnectionError(false);
+    });
+
     socket.current.on("connect_error", (error) => {
       console.log(error);
+      setConnectionError(error.message);
+      setShowConnectionError(true);
       setIsConnected(false);
     });
 
@@ -64,6 +73,9 @@ export const RealTimeBinanceData = () => {
         <button onClick={handleConnect}>
           {isConnected ? "Disconnect" : "Connect"}
         </button>
+
+        {showConnectionError && <p>Connection error. Please, try again.</p>}
+        {connectionError && <p>[{connectionError}]</p>}
       </div>
 
       <div className="charts-container">
