@@ -38,6 +38,10 @@ TODO link
 
 ## Deployment
 
+TODO link to infra
+
+1. Apply infrastructure using terraform
+
 steps:
 build image
 publish image
@@ -62,3 +66,5 @@ and using aws cli to deploy the applications to the available infra
 - Improve resources names in aws to reflect environments
 - Use https for the servers
 - the current deployment of ec2 instances via terraform will mean downtime for the server while the instance is spun up. A load balancer or ECS cluster could be used as a solution.
+- the usage of tailwindcss could be improved or better mixed with the custom css, given proper time
+- the usage of TS types can be improved the 'any' used around for brevities sake

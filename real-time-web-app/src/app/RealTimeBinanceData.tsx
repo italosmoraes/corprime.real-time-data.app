@@ -5,11 +5,11 @@ import { Chart } from "./Chart";
 import { REAL_TIME_SERVER } from "./constants";
 
 export const RealTimeBinanceData = () => {
-  let socket = useRef<Socket | null>(null);
+  const socket = useRef<Socket | null>(null);
 
   const [messages, setMessages] = useState<string[]>([]);
   const [isConnected, setIsConnected] = useState(false);
-  const [hasDisconnected, setHasDisconnected] = useState(false);
+  //   const [hasDisconnected, setHasDisconnected] = useState(false);
   const [showConnectionError, setShowConnectionError] = useState(false);
   const [connectionError, setConnectionError] = useState<string | null>(null);
 
@@ -34,7 +34,6 @@ export const RealTimeBinanceData = () => {
     socket.current.on("disconnect", () => {
       console.log("Disconnected from the server");
       setIsConnected(false);
-      setHasDisconnected(true);
     });
 
     socket.current.on("message", (message: string) => {
@@ -59,7 +58,6 @@ export const RealTimeBinanceData = () => {
     } else {
       socket.current?.disconnect();
       setIsConnected(false);
-      setHasDisconnected(true);
     }
   };
 

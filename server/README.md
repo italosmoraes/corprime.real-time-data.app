@@ -18,6 +18,8 @@ export ALPACA_API_KEY=PKV4VT4P7CBT0C8UL5EV
 export ALPACA_API_SECRET=My3wq1sIpfwaHqbAqT1fBARnf0rAQnXa7vkckaAe
 ```
 
+## Deployment
+
 ### Push docker images to ECR
 
 Build new image:

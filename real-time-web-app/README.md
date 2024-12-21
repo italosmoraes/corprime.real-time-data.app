@@ -48,14 +48,14 @@ Run container:
 ### Push docker images to ECR
 
 Build new image:
-`docker build -t real-time-webapp . --no-cache`
+`docker build -t real-time-web-app . --no-cache`
 
 Tag and push to ECR:
 
 ```
 aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com
-docker rmi --force $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/realtime_data_webapp_repo
-docker tag real-time-server $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/realtime_data_webapp_repo
+docker rmi --force $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/realtime_data_webapp
+docker tag real-time-web-app $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/realtime_data_webapp_repo
 docker push $AWS_ACCOUNT_ID.dkr.ecr.eu-west-1.amazonaws.com/realtime_data_webapp_repo
 ```
 
