@@ -1,0 +1,16 @@
+services:
+  server:
+    build: ./server
+    ports:
+      - 3000:3000
+    container_name: real-time-server
+    restart: always
+
+  client:
+    build: ./real-time-web-app
+    ports:
+      - 80:80
+    container_name: real-time-web-app
+    restart: always
+    environment:
+      - REAL_TIME_SERVER=http://localhost:3000

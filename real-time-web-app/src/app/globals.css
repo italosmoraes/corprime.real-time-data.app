@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.chart {
+  min-width: 20rem;
+  max-width: 40rem;
+  min-height: 20rem;
+  max-height: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+}
+
+.messages-log {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 20rem;
+  overflow-y: scroll;
+  align-items: center;
+  padding: 10px;
+
+  min-width: 20rem;
+  max-width: 25rem;
+  min-height: 20rem;
+  max-height: 25rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
+  button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+  }
+
+  .button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly larger */
+  }
+
+  .button:active {
+    background-color: #3e8e41; /* Even darker green when pressed */
+    transform: scale(0.98); /* Slightly smaller for press effect */
+  }
+}
