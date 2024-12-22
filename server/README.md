@@ -5,17 +5,14 @@ npm install -g @nestjs/cli
 nest generate application
 ```
 
+Local run:
+
+`npm run start:dev`
+
 To run the local socketio:
 
 ```
 npm install -g typescript ts-node
-```
-
-setup the necessary api keys: (!) provided here for brevities sake on setting this up when reviewing
-
-```
-export ALPACA_API_KEY=PKV4VT4P7CBT0C8UL5EV
-export ALPACA_API_SECRET=My3wq1sIpfwaHqbAqT1fBARnf0rAQnXa7vkckaAe
 ```
 
 ## Deployment
@@ -39,9 +36,8 @@ Check details of new image pushed:
 
 ### Real time data api
 
-```
-npm install --save @alpacahq/alpaca-trade-api
-```
+Binance web socket streams:
+https://developers.binance.com/docs/binance-spot-api-docs/web-socket-streams
 
 ## Notes on the development
 

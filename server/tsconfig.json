@@ -18,6 +18,6 @@
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
-    "esModuleInterop": true // This was done primarily because of alpaca lib issues with ESM
+    "esModuleInterop": true
   }
 }
