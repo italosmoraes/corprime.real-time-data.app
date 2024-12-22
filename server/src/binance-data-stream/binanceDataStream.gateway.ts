@@ -60,11 +60,9 @@ export class BinanceDataStreamGateway {
     });
 
     binanceSocket.on('message', (data) => {
-      // Parse and handle the incoming message
       const message = JSON.parse(data.toString());
-      //   console.log('Received:', message);
 
-      // Transform data
+      // Binance data format example. TODO make it an interface
       //   {
       //     "e": "trade",
       //     "E": 123456789,    // Event time
