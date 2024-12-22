@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { Socket, io as socketio } from "socket.io-client";
-import { Chart } from "./Chart";
+import { Chart } from "./components/Chart";
 import { REAL_TIME_SERVER } from "./constants";
 
 export const RealTimeBinanceData = () => {
@@ -9,7 +9,6 @@ export const RealTimeBinanceData = () => {
 
   const [messages, setMessages] = useState<string[]>([]);
   const [isConnected, setIsConnected] = useState(false);
-  //   const [hasDisconnected, setHasDisconnected] = useState(false);
   const [showConnectionError, setShowConnectionError] = useState(false);
   const [connectionError, setConnectionError] = useState<string | null>(null);
 
@@ -78,8 +77,6 @@ export const RealTimeBinanceData = () => {
 
       <div className="charts-container">
         <Chart messages={messages} />
-        {/* <Chart messages={messages} />
-        <Chart messages={messages} /> */}
       </div>
 
       <br></br>

@@ -56,3 +56,4 @@ The webapp and server are deployed independently. Refer to their deployment sect
 
 - The usage of TS types can be improved the 'any' used around for brevities sake
 - The usage of tailwindcss could be improved or better mixed with the custom css, given more time
+- Chart.js offers more options for data display customisation
