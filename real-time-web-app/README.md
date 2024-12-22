@@ -18,12 +18,14 @@ Build new image:
 Run container:
 `docker run -d -dp 80:80 --name webapp real-time-webapp`
 
-## Deploy to vercel via cli
+## Deployment
 
-to deploy to a private test url:
+Deployment is done via vercel cli: https://vercel.com/docs/cli
+
+To deploy to a private test url:
 `vercel`
 
-to deploy to an online available url:
+To deploy to an online available url:
 `vercel --prod`
 
 ensure environment variables are available to vercel:

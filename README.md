@@ -1,16 +1,24 @@
 # Real Time Data App
 
+A simple application which shows financial data streamed from binance in a group of charts when connected to the server stream
+
+Application available at https://corprimereal-time-datawebapp.vercel.app/
+
 ## Architecture
 
 A server exposing websocket endpoints as sending real time data from a choosen source
 
+Simple Nextjs front end application, which opens a websocket to the nestjs server
+
+Nestjs backend connecting to binance web streams
+
 ## Design
 
-dockerised apps
-nestjs model
-nextjs model, although on a simple FE
+Dockerised application for deployment and local development usage
 
-## Local docker run
+Following the nestjs design of modules which include controllers and services
+
+## Local run
 
 make sure docker daemon is installed and running https://docs.docker.com/desktop/setup/install/mac-install/
 
@@ -24,17 +32,13 @@ or during development, to force container rebuild
 docker compose up -d --build --force-recreate
 ```
 
-### OR
-
-Run the server and the app in separate terminals, if you want to bypass the docker usage for local run
-
 ## Server
 
-[server](/server)
+[server](/server/README.md)
 
 ## Web app
 
-[web-app](real-time-web-app)
+[web-app](real-time-web-app/README.md)
 
 ## Deployment
 
