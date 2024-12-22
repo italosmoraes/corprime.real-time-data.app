@@ -20,13 +20,15 @@ Following the nestjs design of modules which include controllers and services
 
 ## Local run
 
-Install nest cli
+1. Install nest cli
 
 ```
  npm i -g @nestjs/cli
 ```
 
-make sure docker daemon is installed and running https://docs.docker.com/desktop/setup/install/mac-install/
+2. Navigate to /server and `npm run install`
+
+3. make sure docker daemon is installed and running https://docs.docker.com/desktop/setup/install/mac-install/ and then,
 
 ```
 docker compose up -d
