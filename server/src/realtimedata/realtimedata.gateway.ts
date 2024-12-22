@@ -32,16 +32,6 @@ export class RealtimedataGateway {
     console.log('Client message: ', payload);
 
     client.emit('message', 'hello from emit gateway');
-
-    // let counter = 5;
-    // while (counter > 0) {
-    //   client.emit('message', counter);
-    //   counter--;
-    //   setTimeout(() => {}, 1000);
-    // }
-
-    // client.emit('message', 'Disconnecting you now...');
-    // client.disconnect();
   }
 
   @SubscribeMessage('continuos_message')

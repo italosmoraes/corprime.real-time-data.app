@@ -23,6 +23,12 @@ npm install -g typescript ts-node
 ts-node socketioClientBinance.ts
 ```
 
+The utils found at `/server/utils` can be used to directly test the server via socket.io by running, for e.g:
+
+```
+ ts-node server/utils/socketioClientBinance.ts
+```
+
 ### Real time data api
 
 We use Binance web socket streams data:
