@@ -1,6 +1,6 @@
 # Real Time Data App
 
-A simple application which shows financial data streamed from binance in a group of charts when connected to the server stream
+A simple application which shows a chart with financial data, specifically for BITCOIN/USD trades, streamed from binance when connected to our nestjs server stream
 
 Application available at https://corprimereal-time-datawebapp.vercel.app/
 
@@ -54,6 +54,7 @@ The webapp and server are deployed independently. Refer to their deployment sect
 
 ### Improvemements
 
+- More endpoints can be added with further study of the binance streams used
 - The usage of TS types can be improved the 'any' used around for brevities sake
 - The usage of tailwindcss could be improved or better mixed with the custom css, given more time
 - Chart.js offers more options for data display customisation
